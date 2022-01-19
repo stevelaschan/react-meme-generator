@@ -1,6 +1,6 @@
 import './App.css';
-import botText from './BottomText';
-import topText from './TopText';
+import MemeBotText from './BottomText';
+import MemeTopText from './TopText';
 
 function App() {
   return (
@@ -12,13 +12,13 @@ function App() {
           alt="logo"
         />
         <h1>Meme Generator</h1>
-        <div>
-          <h5>Enter your Top Text here:</h5>
-          <topText />
+        <h5>
+          <MemeTopText />
+        </h5>
 
-          <h5>Enter your Bot Text here:</h5>
-          <botText />
-        </div>
+        <h5>
+          <MemeBotText />
+        </h5>
       </header>
     </div>
   );

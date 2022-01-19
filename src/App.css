@@ -21,21 +21,3 @@
 .App-link {
   color: #61dafb;
 }
-
-.topText {
-  color: white;
-  padding: 0.2em;
-  margin-bottom: 250px;
-  font-size: 1.3em;
-  border: solid white;
-  border-radius: 5px;
-}
-
-.botText {
-  color: white;
-  padding: 0.2em;
-  margin-bottom: 250px;
-  font-size: 1.3em;
-  border: solid white;
-  border-radius: 5px;
-}
