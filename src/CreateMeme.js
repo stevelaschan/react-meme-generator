@@ -1,40 +1,39 @@
 import './App.css';
 import { saveAs } from 'file-saver';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function SearchForMeme() {
   const [template, setTemplate] = useState('');
   const [botText, setBotText] = useState('');
   const [topText, setTopText] = useState('');
+  const url = `https://api.memegen.link/images/${template}/${topText}/${botText}.png`;
   const saveFile = () => {
-    saveAs(
-      `https://api.memegen.link/images/${template}/${topText}/${botText}.png`,
-    );
+    saveAs(url);
   };
 
   return (
     <div>
       <div>
-        <img
-          src={`https://api.memegen.link/images/${template}/${topText}/${botText}.png`}
-          alt=""
-          className="memetemplate"
-        />
+        <img src={url} alt="" className="memetemplate" />
       </div>
       <br />
       <br />
       <br />
+      {/* SEARCH BAR */}
       <form action="/" method="get">
         <label>
           {' '}
           Meme Template
           <input
+            // Connect state variable to input value
             value={template}
+            // Update state variable with new value (text user types in)
             onInput={(e) => setTemplate(e.target.value)}
-            style={{ marginLeft: '1.8rem' }}
+            style={{ marginLeft: '1.6rem' }}
           />
         </label>
       </form>
+      {/* TOP TEXT */}
       <div>
         <label>
           {' '}
@@ -44,10 +43,11 @@ export default function SearchForMeme() {
             value={topText}
             // Update state variable with new value (text user types in)
             onInput={(e) => setTopText(e.target.value)}
-            style={{ marginLeft: '6.4rem' }}
+            style={{ marginLeft: '6.5rem' }}
           />
         </label>
       </div>
+      {/* BOTTOM TEXT */}
       <div>
         <label>
           {' '}
