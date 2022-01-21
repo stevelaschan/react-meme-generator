@@ -1,10 +1,16 @@
 import './App.css';
+import { saveAs } from 'file-saver';
 import React, { useState } from 'react';
 
 export default function SearchForMeme() {
   const [template, setTemplate] = useState('');
   const [botText, setBotText] = useState('');
   const [topText, setTopText] = useState('');
+  const saveFile = () => {
+    saveAs(
+      `https://api.memegen.link/images/${template}/${topText}/${botText}.png`,
+    );
+  };
 
   return (
     <div>
@@ -21,11 +27,11 @@ export default function SearchForMeme() {
       <form action="/" method="get">
         <label>
           {' '}
-          Template
+          Meme Template
           <input
             value={template}
             onInput={(e) => setTemplate(e.target.value)}
-            style={{ marginLeft: '3.8rem' }}
+            style={{ marginLeft: '1.8rem' }}
           />
         </label>
       </form>
@@ -38,7 +44,7 @@ export default function SearchForMeme() {
             value={topText}
             // Update state variable with new value (text user types in)
             onInput={(e) => setTopText(e.target.value)}
-            style={{ marginLeft: '4.3rem' }}
+            style={{ marginLeft: '6.4rem' }}
           />
         </label>
       </div>
@@ -51,22 +57,17 @@ export default function SearchForMeme() {
             value={botText}
             // Update state variable with new value (text user types in)
             onChange={(e) => setBotText(e.target.value)}
-            style={{ marginLeft: '1.9rem' }}
+            style={{ marginLeft: '4rem' }}
           />
         </label>
       </div>
       <br />
       <br />
       <br />
-      <br />
       <div>
-        <a
-          href={`https://api.memegen.link/images/${template}/${topText}/${botText}.png`}
-          download
-          className="download"
-        >
-          Click to download
-        </a>
+        <button className="download" onClick={saveFile}>
+          Download
+        </button>
       </div>
     </div>
   );

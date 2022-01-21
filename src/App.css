@@ -30,7 +30,8 @@
 }
 
 .download {
-  color: white;
+  font-size: 15px;
+  color: black;
   border: 2px solid white;
   border-radius: 10px;
   padding: 7px;
