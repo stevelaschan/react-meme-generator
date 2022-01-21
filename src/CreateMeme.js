@@ -14,7 +14,12 @@ export default function SearchForMeme() {
   return (
     <div>
       <div>
-        <img src={url} alt="" className="memetemplate" />
+        <img
+          src={url}
+          alt=""
+          className="memetemplate"
+          data-test-id="meme-image"
+        />
       </div>
       <br />
       <br />
