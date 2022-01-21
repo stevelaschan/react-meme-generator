@@ -28,7 +28,7 @@ export default function SearchForMeme() {
       <form action="/" method="get">
         <label for="Meme template">
           {' '}
-          Meme Template
+          Meme template
           <input
             // Connect state variable to input value
             value={template}
@@ -42,7 +42,7 @@ export default function SearchForMeme() {
       <div>
         <label for="Top text">
           {' '}
-          Top Text
+          Top text
           <input
             // Connect state variable to input value
             value={topText}
@@ -56,7 +56,7 @@ export default function SearchForMeme() {
       <div>
         <label for="Bottom text">
           {' '}
-          Bottom Text
+          Bottom text
           <input
             // Connect state variable to input value
             value={botText}
