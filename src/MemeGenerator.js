@@ -1,39 +1,40 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+
+// const imgData = data.map((imgUrl) => {
+//   return imgUrl.blank;
+// })
 
 export default function MemeGenerator() {
-  const [data, setData] = useState([]);
+  const [template, setTemplate] = useState('');
   // async function for fetching the img URLs
 
-  async function fetchUrl() {
-    const response = await fetch('https://api.memegen.link/templates/');
+  // async function fetchUrl() {
+  //   const response = await fetch('https://api.memegen.link/templates/');
 
-    const imgData = await response.json();
-    setData(imgData);
-  }
-
-  const imgData = data.map((imgUrl) => {
-    return imgUrl.blank;
-  });
+  //   const imgData = await response.json();
+  //   setData(imgData);
+  // }
 
   return (
     <div>
       <div>
-        <img src={imgData} alt="meme" />
+        <img src={`https://api.memegen.link/images/${template}.png`} alt="" />
       </div>
       <br />
       <br />
       <br />
-      <label>
-        {' '}
-        Search
-        <input
-          value=""
-          onChange={(event) => setData(event.target.value)}
-          style={{ marginLeft: '30px' }}
-        />
-        <button type="sumbit">Search</button>
-      </label>
+      <form action="/" method="get">
+        <label>
+          {' '}
+          Search
+          <input
+            value={template}
+            onInput={(e) => setTemplate(e.target.value)}
+            style={{ marginLeft: '5.4rem' }}
+          />
+        </label>
+      </form>
     </div>
   );
 }
