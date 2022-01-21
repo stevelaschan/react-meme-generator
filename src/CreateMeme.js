@@ -26,7 +26,7 @@ export default function SearchForMeme() {
       <br />
       {/* SEARCH BAR */}
       <form action="/" method="get">
-        <label for="Meme Template">
+        <label for="Meme template">
           {' '}
           Meme Template
           <input
@@ -40,7 +40,7 @@ export default function SearchForMeme() {
       </form>
       {/* TOP TEXT */}
       <div>
-        <label for="Top Text">
+        <label for="Top text">
           {' '}
           Top Text
           <input
@@ -54,7 +54,7 @@ export default function SearchForMeme() {
       </div>
       {/* BOTTOM TEXT */}
       <div>
-        <label for="Bottom Text">
+        <label for="Bottom text">
           {' '}
           Bottom Text
           <input
