@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 
-export default function SearchForMeme() {
+export default function CreateMeme() {
   const [template, setTemplate] = useState('');
   const [botText, setBotText] = useState('');
   const [topText, setTopText] = useState('');
@@ -12,7 +12,7 @@ export default function SearchForMeme() {
         <img
           src={`https://api.memegen.link/images/${template}/${topText}/${botText}.png`}
           alt=""
-          id="memetemplate"
+          className="memetemplate"
         />
       </div>
       <br />

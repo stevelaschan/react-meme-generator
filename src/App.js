@@ -1,5 +1,5 @@
 import './App.css';
-import SearchForMeme from './SearchForMeme';
+import CreateMeme from './CreateMeme';
 
 function App() {
   return (
@@ -7,14 +7,8 @@ function App() {
       <header className="App-header">
         <h1>Meme Generator</h1>
         <h5>
-          <SearchForMeme />
+          <CreateMeme />
         </h5>
-        {/* <h5>
-          <MemeTopText />
-        </h5>
-        <h5>
-          <MemeBotText />
-        </h5> */}
       </header>
     </div>
   );
