@@ -15,7 +15,7 @@ export default function SearchForMeme() {
     <div>
       <div>
         <img
-          src={url}
+          src={`https://api.memegen.link/images/${template}/${topText}/${botText}.png`}
           alt=""
           className="memetemplate"
           data-test-id="meme-image"
