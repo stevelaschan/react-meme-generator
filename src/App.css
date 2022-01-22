@@ -35,4 +35,21 @@
   border: 2px solid white;
   border-radius: 10px;
   padding: 7px;
+  box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.15);
+  transform: translate3d(0, -5px, 5px);
+  font-family: 'Segoe UI';
+  font-weight: 500;
+}
+
+.download:hover {
+  transform: translate3d(0, 0, 0);
+  box-shadow: none;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
 }

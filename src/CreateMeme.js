@@ -34,10 +34,12 @@ export default function SearchForMeme() {
             value={template}
             // Update state variable with new value (text user types in)
             onInput={(e) => setTemplate(e.target.value)}
-            style={{ marginLeft: '1.6rem' }}
+            className="input"
+            placeholder="Enter the template name of your meme (e.g. bender)"
           />
         </label>
       </form>
+      <br />
       {/* TOP TEXT */}
       <div>
         <label for="Top text">
@@ -48,10 +50,12 @@ export default function SearchForMeme() {
             value={topText}
             // Update state variable with new value (text user types in)
             onInput={(e) => setTopText(e.target.value)}
-            style={{ marginLeft: '6.5rem' }}
+            className="input"
+            placeholder="Enter the top text of your meme"
           />
         </label>
       </div>
+      <br />
       {/* BOTTOM TEXT */}
       <div>
         <label for="Bottom text">
@@ -61,12 +65,12 @@ export default function SearchForMeme() {
             // Connect state variable to input value
             value={botText}
             // Update state variable with new value (text user types in)
-            onChange={(e) => setBotText(e.target.value)}
-            style={{ marginLeft: '4rem' }}
+            onInput={(e) => setBotText(e.target.value)}
+            className="input"
+            placeholder="Enter the bottom text of your meme"
           />
         </label>
       </div>
-      <br />
       <br />
       <br />
       <div>
