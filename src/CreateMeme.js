@@ -73,6 +73,7 @@ export default function SearchForMeme() {
       </div>
       <br />
       <br />
+      {/* DOWNLOAD CUSTOM MEME */}
       <div>
         <button className="download" onClick={saveFile}>
           Download
